@@ -26,6 +26,7 @@ public class Add_Digits {
     public int digitadd(int num){
     	String s = String.valueOf(num);
     	int sum = 0;
+    	//学习这种for循环的方法
     	for(char ch:s.toCharArray())
     	{
     		sum += (ch - '0');
