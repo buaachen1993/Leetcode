@@ -38,6 +38,6 @@ public class Majority_Element{
     {
     	int nums[] = {3,2,3,4,3,5,7};
     	Majority_Element me = new Majority_Element();
-//    	System.out.println(me.majorityElement(nums));
+    	System.out.println(me.majorityElement(nums));
     }
 }
