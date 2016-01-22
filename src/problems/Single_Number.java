@@ -9,6 +9,7 @@ package problems;
  *1、最暴力方法就是从第一个数开始搜索
  *2、额外开一个数组，标记次数，最后对额外数组扫一遍(哈希表)
  *3、异或运算 a ^ b = b ^ a   0 ^ a = a  a ^ a = 0
+ *A XOR B = (A+B)%进制。
  */
 public class Single_Number {
 	public int singleNumber(int[] nums) {

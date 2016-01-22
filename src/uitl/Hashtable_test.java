@@ -1,5 +1,8 @@
 package uitl;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Enumeration;
+
 
 public class Hashtable_test {
 	//哈希表测试
@@ -15,10 +18,20 @@ public class Hashtable_test {
 
 	    Integer n = numbers.get("six");
 	    Integer nn = numbers.get("one");
-	        
-//	    if(n != null)
-//	    	System.out.println(n);
-//	    System.out.println(nn);
-	    System.out.println(1^1);
+    
+	    if(n != null)
+	    	System.out.println(n);
+	    //遍历方法1
+	    Enumeration<String> en = numbers.keys(); 
+	    while(en.hasMoreElements())
+	    {
+		    System.out.println(en.nextElement());
+	    }
+	    //遍历方法2 采用set的遍历方法
+	    for(Iterator<String>   it   =   numbers.keySet().iterator();   it.hasNext();   )   {   
+            String   key   =   (String)   it.next();   
+            Object   value   =   numbers.get(key);   
+            System.out.println(key+value);
+        }  
 	 }
 }
