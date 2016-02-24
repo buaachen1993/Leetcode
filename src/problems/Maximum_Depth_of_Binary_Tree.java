@@ -12,8 +12,8 @@ import uitl.TreeNode;
  *     TreeNode(int x) { val = x; }
  *     }
  * @author chandler
- *Given a binary tree, find its maximum depth.
- *The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+ * Given a binary tree, find its maximum depth.
+ * The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
  *Solution:
  *深度搜索,递归实现
  */

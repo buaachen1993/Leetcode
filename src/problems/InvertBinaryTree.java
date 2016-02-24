@@ -28,6 +28,7 @@ to
  *Solution:递归问题？
  */
 public class InvertBinaryTree {
+	//递归实现
     public TreeNode invertTree(TreeNode root) {
     	if(root == null)
     	{
@@ -38,4 +39,6 @@ public class InvertBinaryTree {
     	root.right = invertTree(temp);
     	return root;
     }
+    //非递归实现
+    
 }
