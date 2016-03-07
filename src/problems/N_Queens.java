@@ -66,7 +66,7 @@ public class N_Queens {
     	{
     		if(isValid(queen, row, column)){
     			queen[row] = column;
-    			findNQueens(queen, n, row+1,result);
+    			findNQueens(queen, n, row+1,result);//本层可以放下queen则进入下面一层寻找位置
     		}
     	}
 
