@@ -1,5 +1,11 @@
 package problems;
+/***
+ * 52. N-Queens II 
+ * @author chandler
+ *Follow up for N-Queens problem.
 
+Now, instead outputting board configurations, return the total number of distinct solutions.
+ */
 public class NQueens2 {
 	public int totalNQueens(int n) {
 		int res = 0;
