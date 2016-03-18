@@ -40,6 +40,7 @@ public class HappyNumber {
     			return false;
     		num = String.valueOf(sum).toCharArray();
     		sum = 0;
+    		
     	}
     	
     }
