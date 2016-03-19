@@ -1,6 +1,5 @@
 package problems;
 
-import uitl.ListNode;
 
 /***
  * 263. Ugly Number
