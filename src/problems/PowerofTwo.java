@@ -25,6 +25,7 @@ public class PowerofTwo {
     public static void main(String args[])
  	{
     	PowerofTwo test = new PowerofTwo();
-    	System.out.println(test.isPowerOfTwo(-2147483648));
+    	//System.out.println(test.isPowerOfTwo(-2147483648));
+    	System.out.println(Integer.toBinaryString(27));
  	}
 }
