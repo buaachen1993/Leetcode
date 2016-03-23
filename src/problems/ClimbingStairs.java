@@ -36,5 +36,6 @@ public class ClimbingStairs {
     {
     	ClimbingStairs test = new ClimbingStairs();
     	System.out.println(test.climbStairs2(5));
+
     }
 }
