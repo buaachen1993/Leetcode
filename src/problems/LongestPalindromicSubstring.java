@@ -80,7 +80,7 @@ public class LongestPalindromicSubstring {
       public String longestPalindrome2(String s) {
             String T = preProcess(s);
             int length = T.length();
-            int[] p = new int[length];
+            int[] p = new int[length];//P表示当前i位置的回文长度
             int C = 0, R = 0;
             
             for (int i = 1; i < length - 1; i++)
@@ -113,6 +113,7 @@ public class LongestPalindromicSubstring {
 
             int maxLen = 0;
             int centerIndex = 0;
+            //循环寻找最大的长度和中心 
             for (int i = 1; i < length - 1; i++) {
                 if (p[i] > maxLen) {
                   maxLen = p[i];
