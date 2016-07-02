@@ -10,7 +10,7 @@ Subscribe to see which companies asked this question
 solution:
 首先需要明确罗马数字的规则
 https://www.douban.com/note/335254352/
-从头到尾遍历，如果后一个数小雨等于前一个数，则直接相加，如果后一个数大于前一个数，则相加后减去前者的两倍
+从头到尾遍历，如果后一个数小于等于前一个数，则直接相加，如果后一个数大于前一个数，则相加后减去前者的两倍
 先把字符数组转化为数字，然后用一个数组来记录每个数字分别表示多大的数
  */
 public class Roman2Integer {
