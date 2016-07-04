@@ -24,40 +24,42 @@ A solution set is:
 * 2、先进行排序 然后定位一个数转化为2-sum的问题 只需要考虑i后面的数
  */
 public class ThreeSum {
-    List<List<Integer>> solutions = new ArrayList<>();
+
     public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> solutions = new ArrayList<>();
         if (nums == null || nums.length < 3) 
         	return solutions;  
         Arrays.sort(nums);
-        int len = nums.length;
-        for (int i = 0; i < len-2; i++) {  
-            if (i > 0 && nums[i] == nums[i-1]) //如果相同则不需要重复寻找
-            	continue;  
-            find(nums, i+1, len-1, nums[i]); //寻找两个数与num[i]的和为0  
-        }  
+    	int len = nums.length;
+    	for(int i = 0;i < len -2;i++){//i是定位元素
+            if (i > 0 && nums[i] == nums[i-1]) continue;  
+            int l = i+1;
+            int r = len -1;
+            while(l < r)
+            {
+            	int sum = nums[i] + nums[l] + nums[r];
+            	if(sum == 0){
+                    List<Integer> ans = new ArrayList<Integer>();  
+                    ans.add(nums[i]);  
+                    ans.add(nums[l]);  
+                    ans.add(nums[r]);
+                    if(!solutions.contains(ans))
+                    	solutions.add(ans); //放入结果集中  
+                    while (l < r && nums[l] == nums[l+1]) l++;//考虑各种情况
+                    while (l < r && nums[r] == nums[r-1]) r--;
+                    //找到一组解之后同时往里移动一下
+                    l++;  
+                    r--;  
+            	}else if (sum < 0) {  
+            		l++;  
+            	} else {  
+            		r--;  
+            	}  
+            }
+    	}
         return solutions;
     }
-    public void find(int[] num, int begin, int end, int target) {//只需要考虑i后面的数,因为前面的组合肯定已经全部遍历过了
-        int l = begin, r = end;  
-        while (l < r) {  
-            if (num[l] + num[r] + target == 0) {  
-                List<Integer> ans = new ArrayList<Integer>();  
-                ans.add(target);  
-                ans.add(num[l]);  
-                ans.add(num[r]);
-                if(!solutions.contains(ans))
-                	solutions.add(ans); //放入结果集中  
-                while (l < r && num[l] == num[l+1]) l++;//考虑各种情况
-                while (l < r && num[r] == num[r-1]) r--;
-                l++;  
-                r--;  
-            } else if (num[l] + num[r] + target < 0) {  
-                l++;  
-            } else {  
-                r--;  
-            }  
-        }  
-    } 
+
     public static void main(String args[])
     {
     	ThreeSum test = new ThreeSum();
