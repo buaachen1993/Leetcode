@@ -37,7 +37,6 @@ public class MergeTwoSortedLists {
         	}
         	temp.next = cur;
         	temp = temp.next;
-        	
         }
         return head.next;
     }
