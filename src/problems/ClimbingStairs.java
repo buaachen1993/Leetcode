@@ -30,7 +30,7 @@ public class ClimbingStairs {
     		pre = cur;
     		cur = ways;
     	}
-    	return ways;    		
+    	return ways;    		 
     }
     public static void main(String args[])
     {
