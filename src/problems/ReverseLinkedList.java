@@ -41,7 +41,7 @@ public class ReverseLinkedList {
         p.next = head;//加入新节点 head是原来的头，p是原来的尾
         return n;
     }
-    public ListNode reverseList3(ListNode head) {//递归方法 有点难理解
+    public ListNode reverseList3(ListNode head) {//非递归方法 
         if(head == null)
         	return null;
         if(head.next == null)
