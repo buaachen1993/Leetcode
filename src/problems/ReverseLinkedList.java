@@ -49,12 +49,12 @@ public class ReverseLinkedList {
         ListNode pre = head; //前一个节点
         ListNode p = head.next;//当前节点  
         pre.next = null;  
-        ListNode nxt; //下一个节点 
+        ListNode next; //下一个节点 
         while(p!=null) {  
-            nxt = p.next;  //存储下一个节点
+            next = p.next;  //存储下一个节点
             p.next = pre; //建立反向链接 
             pre = p;  //整体后移
-            p = nxt;  
+            p = next;  
         }  
         return pre;  
     }
