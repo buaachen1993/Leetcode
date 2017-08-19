@@ -12,8 +12,6 @@ package problems;
           应该按照字符的长度逐步生成。
  3、对每一个回文中心进行检测 判断长度 一共有2N-1个中心 每个中心的检测需要O（N）时间
  3、Manacher算法 http://www.cnblogs.com/bitzhuwei/p/Longest-Palindromic-Substring-Par-I.html#_label1
- 	
-
 */
 
 public class LongestPalindromicSubstring {
@@ -21,11 +19,11 @@ public class LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         char[] testStr = s.toCharArray();
         int length = s.length();
-        boolean[][] P = new boolean[length][length];//P[i,j]用以表示Si…Sj是回文（true）或不是回文
+        boolean[][] P = new boolean[length][length];//P[i,j]用以表示....000000000000.0Si…Sj是回文（true）或不是回文
         int i = 0,j = 0;//计数器
         int start = 0,end =0,maxLength = 0;//子串的起止位置和最长长度
         //先生成所有的初始条件
-        for(i = 0; i < length ;i++)
+        for(i = 0; i < length ;i++) 
         {
         	P[i][i] = true;
 //    		System.out.println(i+","+i+":"+P[i][i]);
@@ -50,7 +48,6 @@ public class LongestPalindromicSubstring {
         //遍历寻找最长子串
         for(i= 0;i< length;i++)
         {        		
-
         	for(j = i; j < length;j++)
         	{
         		if(P[i][j] == true && (j-i)> maxLength)
