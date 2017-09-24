@@ -17,7 +17,7 @@ public class Add_Digits {
     //给出另外一种暴力的思路
     public int addDigits2(int num){
     	num = digitadd(num);
-    	while(num > 9)
+    	while(num > 9) 
     	{
     		num = digitadd(num);
     	}
